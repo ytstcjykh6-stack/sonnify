@@ -6,6 +6,7 @@
     --color-body: #918ca4;
 }
 
+/* Typography*/
 html {
     /* -62.5% of 16px = 10px. 
        -Everytime you put a rem, for example: 1rem means 10px, 2rem means 20px.
@@ -50,7 +51,7 @@ p {
     h1 {
         font-size: 8rem;
     }
-
+    
     h2 {
         font-size: 4rem;
     }
@@ -59,4 +60,34 @@ p {
         font-size: 2.4rem;
     }
 
+}
+
+/* LINKS */
+
+a {
+    text-decoration: none;
+}
+
+.link-arrow {
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.link-arrow::after {
+    content: '-->';
+    margin-left: 5px;
+    transition: margin 0.30s;
+}
+
+.link-arrow:hover::after {
+    margin-left: 10px;
+}
+
+@media  screen and (min-width: 1024px) {
+    .link-arrow {
+        font-size: 1.5rem;
+    }
+    
 }
