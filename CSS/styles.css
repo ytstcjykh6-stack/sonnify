@@ -634,6 +634,7 @@ a {
 
 .block__header {
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .block__heading {
@@ -646,7 +647,9 @@ a {
 }
 
 
-.block--dark h1, h2, h3 {
+.block--dark h1, 
+.block--dark h2,
+.block--dark h3,{
     color: #fff;
 }
 
@@ -825,3 +828,4 @@ a {
         width: auto;
     }
 }
+
