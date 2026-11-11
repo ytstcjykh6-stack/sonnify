@@ -218,7 +218,7 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -312,6 +312,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -355,8 +356,9 @@ a {
 }
 
 /* Plans */
+
 .plan {
-    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-out;
 }
  
 .plan__name {
@@ -426,6 +428,17 @@ a {
     }
     .plan__description {
         font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .plan--popular {
+        transform: none;
+    }
+
+    .plan:hover,
+    .plan--popular:hover {
+        transform: none;
     }
 }
 
@@ -518,6 +531,7 @@ a {
 
 .testimonial {
    padding: 3rem;
+   margin-bottom: 5rem;
 }
 
 .testimonial__image {
@@ -556,7 +570,9 @@ a {
 /* Callouts */
 .callout {
     padding: 4rem;
-    border-radius: 5px;
+    border-radius: 5px; 
+    width: 100%;
+    margin: 0 auto;   
 }
 
 .callout--primary {
@@ -591,6 +607,15 @@ a {
         justify-self: start;
         margin: 0 2rem;
     }
+
+    .callout {
+        min-width: 80%;
+        max-width: 800px;
+        margin: 0 auto -5rem;
+        position: relative;
+        z-index: 1;
+    }
+    
 }
 
 /* Collapsible */
@@ -763,11 +788,12 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
     font-size: 2rem;
     font-weight: 600;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 6rem);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 6rem);
     justify-items: center;
     margin: auto;
     max-width: 700px;
@@ -777,10 +803,22 @@ a {
     .block-domain__prices {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 
-    }
+    } 
 }
 
 /* Plan Blocks */
+
+.block-plans .grid {
+    gap: 8rem 4rem;
+}
+ 
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+/* Feature Block */
 .feature__heading {
     margin: 1rem 0;
 }
@@ -832,6 +870,8 @@ a {
 /* Footer */
 .footer {
     background: #232323;
+    padding-top: 12rem;
+   
 }
 
 .footer a {
